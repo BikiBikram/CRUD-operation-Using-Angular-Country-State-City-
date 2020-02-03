@@ -1,0 +1,28 @@
+
+
+<hr>
+<h5 style="color:rgb(128, 255, 0)">State List :-</h5>
+<br/>
+
+      <table class="table table-striped" style="color:seashell;">
+                  <thead>
+                   <tr style="color:blue">
+                       <th scope="col">SL.No-</th>
+                       <th scope="col">States</th>
+                       <th scope="col">Countries</th>
+                   </tr>
+                </thead>
+  <tbody >
+       <tr *ngFor="let sta of stateeee; let i = index" >
+             <th scope="row">{{i}}</th>
+            <td>{{sta.name}}</td>
+
+             <td>{{sta.CNAME}}</td>
+             <td></td>
+
+       </tr>
+
+  </tbody>
+
+</table>
+

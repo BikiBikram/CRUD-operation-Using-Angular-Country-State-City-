@@ -1,0 +1,30 @@
+<div  style="text-align: center;"><h3 style="color:darkmagenta;">Wellcome To Country</h3>
+  <button class="btn btn-outline-warning" style="float: right;"
+  (click)="onlogout()">Logout</button></div>
+
+
+
+
+
+<div>
+      <form [formGroup]="userenterForm" (ngSubmit)="Onaddcountry()" #f="ngForm">
+     <label >
+            Country:-
+            <input class="form-control"
+            type="text" formControlName="CNAME"
+            placeholder="Enter Country ..."
+            [(ngModel)]="dtafromchild"
+            required>
+       </label>
+                <button class="btn btn-primary " type="submit" [disabled]="!f.valid">{{ editMode ? 'Update' :'Add'}}</button>
+
+       </form>
+</div>
+
+
+
+<app-country-list [countreee]="countries" (myoutput)="getdata($event)"></app-country-list>
+
+
+
+

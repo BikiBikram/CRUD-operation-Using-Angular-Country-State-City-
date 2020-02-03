@@ -1,0 +1,25 @@
+<div  style="text-align: center;"><h3 style="color:darkmagenta;">Wellcome To State</h3></div>
+
+<div class="input-group mb-3">
+  <form [formGroup]="userstateform" (ngSubmit)=onaddstate() style="color:black;">
+
+
+
+      <label>Country:- </label>
+        <select class="btn btn-success dropdown-toggle" formControlName="CNAME">
+             <option value="">--Select--</option>
+             <option *ngFor="let cont of countryyyyy" [value]="cont.CNAME">{{cont.CNAME}}</option>
+        </select>
+<br>
+        <label>State:  <input type="text" class="form-control" placeholder="Add state Name..."
+          formControlName="name"></label>
+
+
+        <br>
+
+         <button class="btn btn-primary " type="submit">save</button>
+  </form>
+
+</div>
+
+<app-statelist [stateeee]="stateeee"></app-statelist>

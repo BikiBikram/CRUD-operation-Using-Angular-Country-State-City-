@@ -1,0 +1,27 @@
+<h5>Country List :-</h5>
+
+
+        <input class="col-xs-2"
+          placeholder="Search..."
+          style="float: right;width:200px;"
+          type="text"
+          [(ngModel)]="SearchBar">
+
+
+     <table class="table table-striped" style="color: white;">
+
+             <thead>
+                  <tr>
+                      <th scope="col">SL.No-</th>
+                      <th scope="col">Country</th>
+                   </tr>
+              </thead>
+      <tbody >
+                   <tr *ngFor="let cont of countreee  | countryfilter : SearchBar ; let i = index">
+                     <th scope="row">{{i}}</th>
+                          <td>{{cont.CNAME}}</td>
+                          <td><button class="btn btn-primary " type="button" (click)="onEditCountry(cont.CNAME,i)">Edit</button></td>
+                          <td><button class="btn btn-danger " (click)="onDeleteCountry()">Delete</button></td>
+                    </tr>
+        </tbody>
+</table>

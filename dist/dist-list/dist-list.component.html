@@ -1,0 +1,30 @@
+
+
+<hr>
+<h5>Dist List :-</h5>
+<br/>
+
+   <table class="table table-striped">
+                  <thead>
+                   <tr>
+                       <th scope="col">SL.No-</th>
+                       <th scope="col">Dist</th>
+                       <th scope="col">State</th>
+                       <th scope="col">Country</th>
+                   </tr>
+                </thead>
+         <tbody >
+                <tr *ngFor="let dist of disteee; let i = index" >
+                     <th scope="row">{{i}}</th>
+                     <td>{{dist.DNAME}}</td>
+
+                      <td>{{dist.name}}</td>
+                      <td>{{dist.CNAME}}</td>
+
+
+                 </tr>
+
+         </tbody>
+
+</table>
+
